@@ -1,0 +1,1 @@
+/usr/bin/ld CMakeFiles/sub.dir/sub.asm.o -o sub

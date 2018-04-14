@@ -1,0 +1,4 @@
+/mnt/c/work/cpp-course/helloasm/CMakeFiles/hello.dir
+/mnt/c/work/cpp-course/helloasm/CMakeFiles/mul.dir
+/mnt/c/work/cpp-course/helloasm/CMakeFiles/my_add.dir
+/mnt/c/work/cpp-course/helloasm/CMakeFiles/sub.dir

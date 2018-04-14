@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/work/itmo/ITMO_CPP/huffman_cmake/bits_seq.h
+cstdint
+-
+vector
+-
+
+C:/work/itmo/ITMO_CPP/huffman_cmake/freq_tree.h
+vector
+-
+algorithm
+-
+unordered_map
+-
+bits_seq.h
+C:/work/itmo/ITMO_CPP/huffman_cmake/bits_seq.h
+
+C:/work/itmo/ITMO_CPP/huffman_cmake/huffman_cod.h
+freq_tree.h
+C:/work/itmo/ITMO_CPP/huffman_cmake/freq_tree.h
+unordered_map
+-
+
+C:/work/itmo/ITMO_CPP/huffman_cmake/main.cpp
+iostream
+-
+fstream
+-
+exception
+-
+cstring
+-
+huffman_cod.h
+C:/work/itmo/ITMO_CPP/huffman_cmake/huffman_cod.h
+

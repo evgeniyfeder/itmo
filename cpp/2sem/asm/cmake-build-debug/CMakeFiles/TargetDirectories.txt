@@ -1,0 +1,3 @@
+C:/work/itmo/cpp/asm/cmake-build-debug/CMakeFiles/mul.dir
+C:/work/itmo/cpp/asm/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/work/itmo/cpp/asm/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc libhuffman_lib.a  CMakeFiles/huffman_lib.dir/bits_seq.cpp.obj CMakeFiles/huffman_lib.dir/decoder.cpp.obj CMakeFiles/huffman_lib.dir/encoder.cpp.obj CMakeFiles/huffman_lib.dir/freq_tree.cpp.obj
+C:\MinGW\bin\ranlib.exe libhuffman_lib.a

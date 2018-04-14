@@ -1,0 +1,1 @@
+/usr/bin/ld CMakeFiles/my_add.dir/my_add.asm.o -o my_add

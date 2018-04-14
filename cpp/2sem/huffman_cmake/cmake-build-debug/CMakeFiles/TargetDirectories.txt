@@ -1,0 +1,8 @@
+C:/work/itmo/ITMO_CPP/huffman_cmake/cmake-build-debug/CMakeFiles/huffman_cmake.dir
+C:/work/itmo/ITMO_CPP/huffman_cmake/cmake-build-debug/CMakeFiles/huffman_lib.dir
+C:/work/itmo/ITMO_CPP/huffman_cmake/cmake-build-debug/CMakeFiles/install/local.dir
+C:/work/itmo/ITMO_CPP/huffman_cmake/cmake-build-debug/CMakeFiles/install.dir
+C:/work/itmo/ITMO_CPP/huffman_cmake/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/work/itmo/ITMO_CPP/huffman_cmake/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/work/itmo/ITMO_CPP/huffman_cmake/cmake-build-debug/CMakeFiles/list_install_components.dir
+C:/work/itmo/ITMO_CPP/huffman_cmake/cmake-build-debug/CMakeFiles/install/strip.dir
