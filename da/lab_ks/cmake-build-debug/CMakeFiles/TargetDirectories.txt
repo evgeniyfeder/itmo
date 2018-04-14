@@ -1,0 +1,4 @@
+C:/work/itmo/da/lab_ks/cmake-build-debug/CMakeFiles/d.dir
+C:/work/itmo/da/lab_ks/cmake-build-debug/CMakeFiles/minim_n2.dir
+C:/work/itmo/da/lab_ks/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/work/itmo/da/lab_ks/cmake-build-debug/CMakeFiles/rebuild_cache.dir

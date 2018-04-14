@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Permutations">
+      <UniqueIdentifier>{bc5a34ea-b2fe-47ff-80ec-0b35b76f2875}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Choose">
+      <UniqueIdentifier>{4fc49fa0-8fc3-47a7-91ab-6ec04faf7162}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Brackets">
+      <UniqueIdentifier>{de1cced6-0f4d-432f-a906-faf9a5acf9a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Particle of number">
+      <UniqueIdentifier>{bd5cb410-2efd-4a12-8192-4bae25af83e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Vector">
+      <UniqueIdentifier>{f2ad59d0-b67e-4a30-b6ee-93187e482985}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Multiset">
+      <UniqueIdentifier>{5a7c11aa-9186-4afb-8f73-89504c5c946a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="template.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="comb\perm.cpp">
+      <Filter>Source Files\Permutations</Filter>
+    </ClCompile>
+    <ClCompile Include="comb\choose.cpp">
+      <Filter>Source Files\Choose</Filter>
+    </ClCompile>
+    <ClCompile Include="brackets.cpp">
+      <Filter>Source Files\Brackets</Filter>
+    </ClCompile>
+    <ClCompile Include="brackets2.cpp">
+      <Filter>Source Files\Brackets</Filter>
+    </ClCompile>
+    <ClCompile Include="comb\part.cpp">
+      <Filter>Source Files\Particle of number</Filter>
+    </ClCompile>
+    <ClCompile Include="comb\vector.cpp">
+      <Filter>Source Files\Vector</Filter>
+    </ClCompile>
+    <ClCompile Include="comb\multiset.cpp">
+      <Filter>Source Files\Multiset</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
