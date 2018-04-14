@@ -292,3 +292,5 @@ __pycache__/
 *.aux
 *.in
 *.out
+matan/
+*.class
