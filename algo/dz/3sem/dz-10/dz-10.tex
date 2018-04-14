@@ -1,0 +1,32 @@
+\documentclass[12pt, a4paper]{scrartcl}
+\usepackage [utf8] {inputenc} 
+\usepackage [english,russian] {babel}
+\usepackage{indentfirst}
+\usepackage{misccorr}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage [warn] { mathtext }
+
+\begin{document}
+	\LARGE{\textbf{Федер Евгений, Домашнее задание №10}}\par
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\emph{\textbf{Задание 1.}}\par
+	\textit{\textbf{Формулировка:} Пусть $a$ и $b$ - потоки в G и (a - b)(u, v) = a(u, v) - b(u, v). Тогда a - b является потоком в $G_b$ и $|a-b|=|a|-|b|$}\par
+	
+	Что нам надо доказать?\par
+	\begin{enumerate}
+		\item Антисимметричность: $(a - b)(u, v) = (-a(v, u)) - (-b(v, u)) = (b - a)(v, u)$
+		\item Огранниченность: $(a - b)(u, v) \leqslant c(u, v) - b(u, v) = c_b(u, v)$
+		\item Закон сохранения поток: $\sum_{v \in V}(a - v)(u, v) = \sum_{v \in V}a(u, v) - \sum_{v \in V}b(u, v) = 0 - 0 = 0$
+		\item вторую часть про модули $ |a - b| = \sum_{v \in V}(a(s,v) - b(s,v)) = \sum_{v \in V}a(s,v) - \sum_{v \in V}b(s,v) = |a| - |b|$ 	
+	\end{enumerate}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\emph{\textbf{Задание 2.}}\par
+	Давайте докажем, что $c^+(v) = c_f^+(v)$ и также для минуса.\par
+	В остаточной сети сумма для выходящих ребер уменьшается на значение потока, но у нас появляются обратные к входящим ребрам, где сумма равна потоку(из закона сохранения потока). Поэтому $c^+(v)$ не изменилось.\par
+	Для входящих ребер в обычный сети значение уменьшится на значение потока, но обратные ребра к выходящим скомпенсируют потерю. Поэтому $c^-(v)$ не изменилось(опять же по ЗСП)\par
+	Поэтому $C(G) = C(G_f)$
+	
+\end{document}
