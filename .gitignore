@@ -294,3 +294,6 @@ __pycache__/
 *.out
 matan/
 *.class
+
+*.cmi
+*.cmo
