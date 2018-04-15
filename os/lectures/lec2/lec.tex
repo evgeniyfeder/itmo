@@ -1,0 +1,94 @@
+\documentclass[12pt, a4paper]{scrartcl}
+\usepackage [utf8] {inputenc} 
+\usepackage [english,russian] {babel}
+\usepackage{indentfirst}
+\usepackage{misccorr}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage [warn] { mathtext }
+\usepackage{minted} % for highlight
+
+
+\begin{document}
+	\section{Процессы и потоки}
+		\textbf{Процесс} - экземпляр замущенного исполняемого файла. Нужен для того, что абстрагивровать писание программы, как будто все возможности только твои.
+		
+		
+		Процесс состоит из \textbf{потоков}. Это вычислительный контекст. Раньше он обычно был один, потому что у нас было только одно ядро. Но со временем появились ядра и появилась необходимость писать программу в несколько потоков.
+		
+		\subsection{Что общего у потоков?}
+			\begin{enumerate}
+				\item регистры	
+				\item стек
+				\item ид потока
+				\item IPC
+			\end{enumerate}
+		\subsection{Как выглядит память у потока?}
+		stack - сохранение регистров\par
+		| \par
+		V \par
+		..... \par
+	 	|\par
+		heap - в с++(free store) - динамическая память\par
+		\_\_\_\_\_\par
+		data - статик переменные\par
+		\_\_\_\_\_\par
+		text - код программы\par
+		\subsection{Действия с процессами}
+			\subsubsection{fork}
+				\mintinline{c++}{pid_t fork(void);} 
+				
+				Это создание нового процесса. До форка был один процесс(1). После стало два процесса и все стало параллельно 
+				
+				Пример кода для использования:
+				\begin{minted}[linenos, frame=lines, framesep=2mm, tabsize = 4, breaklines]{c++}
+				const pit_t pid = fork();
+				if (pid == -1) {
+					// handle error
+				}
+				if (!pid) {
+					// we are child - do child work
+				}
+				if (pid) {
+					// we are parent - do parent work
+				}
+				\end{minted}
+				
+				Но понятное дело, что писать так \mintinline{c++}{if(pid)} постоянно грустно и произойдет \textit{fork bomba}
+			\subsubsection{execve}
+				\mintinline{c++}{int execve(const char *filename, char *const argv[], char *const envp[]);}
+				Заместить наш процесс новым процесс по имени \mintinline{c++}{filename} c аргументами \mintinline{c++}{args}
+				
+				Пример - мы хотим вызвать man из bash-a
+				
+				\begin{minted}[linenos, frame=lines, framesep=2mm, tabsize = 4, breaklines]{c++}
+				const pit_t pid = fork(); // сделали форк основного процесса
+				if (pid) {
+					// ... parent - continue working with bash
+				}
+				else (!pid) {
+					execve("man", "execve"); // вызвали процесс man 
+				}
+				\end{minted}
+			\subsubsection{waitpid}
+				\mintinline{c++}{pid_t waitpid(pid_t pid, int *status, int options);}
+				
+				Подождать конец процесса с ид \mintinline{c++}{pid}.
+				Например в предыдущем коде можно внутри \mintinline{c++}{if(pid)} написать waitpid - подождать пока выйдет ребенок
+			\subsubsection{Exit and kill}
+				\mintinline{c++}{void exit(int status);}\par
+				\mintinline{c++}{int kill(pid_t pid, int sig);}\par
+				Убить себя или чужой процесс с состоянием \mintinline{c++}{status(pid)]}. Если хочешь завершить чужой процесс - передаешь \mintinline{c++}{sig} с которым ты хочешь завершить процесс
+		\subsection	{Виды процессов}
+			\subsubsection {Процесс 1}
+				Ядро всегда создает процесс с номером 1. У нее есть две специальные команды для системы инициализации. Примером может быть \textbf{init/systemd}. Они запускают системные сервисы.
+			\subsubsection {Zombie процессы}
+				Что будет если не сделать \textbf{waitpid} у родителя? После завершения процесса он освобождается, но если не вызвать он будет "зомби-процессом" - будет занимать немного места, но он будет щанимать ид-шники. Также его нельзя убить.
+			\subsection{Orphan(сирота)}
+				Ситуация когда родителя убили. Пид родителя становится 1.
+		\subsection{Scheduler}
+			Как процессы живут вместе? Давайте постепенно переключать процессы. Этим занимается ОС с помощью scheduler. Он берет и с помощью некоторого порядка задает очередь выполнения процессов. Каждый процесс работает по определенному косучку времени(например 15 мс).
+			
+				
+				
+\end{document}

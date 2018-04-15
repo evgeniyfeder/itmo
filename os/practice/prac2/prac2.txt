@@ -1,0 +1,103 @@
+Давайте напишем cat
+cat - перевести какой-то ввод на вывод
+
+Какие есть расширение
+	cat - --- прочитать из стдин
+
+Попробуем его написть
+Если что-то не знаешь man 2 /**/
+
+int main(int argc, char *argv[]) {
+	printf("%d\n", argc);
+	printf("%s\n", argv);
+}
+
+в аргв будет храниться первым относительный путь как вызывается программа
+
+#include <unistd.h>
+
+#define BUFFER_SZ 1024
+char buf[BUFFER_SZ];
+
+int main(int argc, char *argv[]) {
+	read(STDIN_FILENO, buf, BUFFER_SZ);
+	write(STDOUT_FILENO, buf, BUFFFER_SZ); 
+}
+
+Это вывод в стдоут из стдин
+
+Что будет если будет большой файл.
+
+#include <unistd.h>
+
+#define BUFFER_SZ 1024
+char buf[BUFFER_SZ];
+
+void do_cat(int fd) {
+	ssize_t read_count = 0;
+	
+	while ((read_count = read(fd, buf, BUFFER_SZ)) > 0)
+		write(STDOUT_FILENO, buf, read_count); 
+}
+
+int main(int argc, char *argv[]) {
+	for (int i = 1; i < argc; i++) {
+		int fd = open(argv[i], O_RDONLY);
+		
+		if (fd < 0) {		
+			perror ("open");
+			continue;
+		}
+		do_cat(fd);
+		close(fd);	
+}
+
+но тут произойдет проблема. Надо подключить хедеры для стандартных вызовов
+Также мы хотим использовать -
+1) хотим много их
+2) если их много - не надо закрывать fd
+
+#include <unistd.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <string.h>
+
+#define BUFFER_SZ 1024
+char buf[BUFFER_SZ];
+
+int do_cat(int fd) {
+	ssize_t read_count = 0;
+	
+	while ((read_count = read(fd, buf, BUFFER_SZ)) > 0)
+		write(STDOUT_FILENO, buf, read_count); 
+
+	if (fd == STDIN_FILENO)
+		return 0;
+	return 1; 
+}
+
+int main(int argc, char *argv[]) {
+	for (int i = 1; i < argc; i++) {
+		
+		int fd;
+		
+		if (strcmp(argv[i], "-") {			
+			fd = STDIN_FILENO;		
+		}
+		else {
+			fd = open(argv[i], O_RDONLY);
+
+			if (fd < 0) {		
+				perror ("open");
+				continue;
+			}
+
+		}
+
+		if (do_cat(fd))
+			close(fd);	
+}
+
+
+3) если изначально закрыть стдин. следующий фд будет == 0 и он не будет закрыт
