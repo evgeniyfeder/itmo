@@ -297,3 +297,4 @@ matan/
 
 *.cmi
 *.cmo
+asm/hw/print/

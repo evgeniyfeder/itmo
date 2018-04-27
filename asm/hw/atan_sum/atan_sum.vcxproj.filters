@@ -23,5 +23,8 @@
     <YASM Include="atan_sum.asm">
       <Filter>Source Files</Filter>
     </YASM>
+    <YASM Include="atan_sum_simd.asm">
+      <Filter>Source Files</Filter>
+    </YASM>
   </ItemGroup>
 </Project>

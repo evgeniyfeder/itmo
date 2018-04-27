@@ -65,4 +65,9 @@ SSE3 - Core 2 - добавили некоторые команды типа по
 SSSE3 - целочисленное разрешение
 palignr xmm*, xmm*, const. Скрещивает два 128 -> 256 и вырезает 128 с позиции константы
 
-pshufw dst, src, const8 
+pshufw dst, src, const8
+
+
+
+|x|x3|x5|x7|
+ 

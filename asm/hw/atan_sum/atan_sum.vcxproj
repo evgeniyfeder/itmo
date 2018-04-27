@@ -147,6 +147,7 @@
   </ItemGroup>
   <ItemGroup>
     <YASM Include="atan_sum.asm" />
+    <YASM Include="atan_sum_simd.asm" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
