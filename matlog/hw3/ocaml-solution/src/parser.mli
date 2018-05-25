@@ -1,12 +1,13 @@
 type token =
   | VAR of (string)
+  | EXPR of (Data.tree)
   | IMPL
   | AND
   | OR
   | NOT
   | OPEN
   | CLOSE
-  | DISP
+  | GENERAL
   | COMMA
   | EOF
 

@@ -5,7 +5,7 @@ let (>>) x f = f x;;
 
 let parse_str parser = (fun s -> s >> Lexing.from_string >> parser Lexer.main);;
 let parse_head head = parse_str Parser.head head;;
-let parse_expr = parse_str Parser.main;;
+let parse_expr expr = parse_str Parser.main expr;;
 
 (**** Checking hash tables ****)
 let assumptions_table = Hashtbl.create 1024;; (* tree -> int *)
@@ -21,13 +21,7 @@ let rec fill_assumptions data ind =
 		fill_assumptions xs (ind + 1)
 ;;
 
-let find_opt htable statement =
-  if Hashtbl.mem htable statement then
-    Some (Hashtbl.find htable statement)
-  else
-    None
-;;
-
+let find_opt htable statement = if Hashtbl.mem htable statement then Some (Hashtbl.find htable statement) else None;;
 let check_assumption statement = find_opt assumptions_table statement;;
 let check_mp statement = find_opt proofed_table statement;;
 
@@ -59,20 +53,20 @@ let check_axioms statement = match statement with
 let add_mp_case statement ind =
 	match statement with
 	| Binop (Impl, a, b) ->
-		if (Hashtbl.mem expressions_table a) then
-      Hashtbl.replace proofed_table b (ind, (Hashtbl.find expressions_table a))
-		else if (Hashtbl.mem mp_parts a) then
-      Hashtbl.replace mp_parts a ((b, ind) :: (Hashtbl.find mp_parts a))
-		else
-      Hashtbl.add mp_parts a [(b, ind)]
+		if (Hashtbl.mem expressions_table a)
+			then Hashtbl.replace proofed_table b (ind, (Hashtbl.find expressions_table a))
+		else if (Hashtbl.mem mp_parts a)
+			then Hashtbl.replace mp_parts a ((b, ind) :: (Hashtbl.find mp_parts a))
+		else Hashtbl.add mp_parts a [(b, ind)]
 	| _ -> ()
 ;;
 
 
 let update_old_mp statement ind =
-	if (Hashtbl.mem mp_parts statement) then
+	if (Hashtbl.mem mp_parts statement) then begin
 		List.iter (fun (e, i) -> Hashtbl.replace proofed_table e (i, ind)) (Hashtbl.find mp_parts statement);
-		Hashtbl.replace mp_parts statement []
+		Hashtbl.replace mp_parts statement [];
+	end
 ;;
 
 
@@ -89,8 +83,8 @@ let get_annotation s =
 (* Add one string to proof *)
 let do_one_step statement ind =
 	let res = get_annotation statement in
-    add_mp_case statement ind;
-    update_old_mp statement ind;
-    Hashtbl.replace expressions_table statement ind;
-    res
+  	add_mp_case statement ind;
+  	update_old_mp statement ind;
+  	Hashtbl.replace expressions_table statement ind;
+  	res
 ;;

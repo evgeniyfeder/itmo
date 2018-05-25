@@ -3,10 +3,9 @@
 %}
 
 %token <string> VAR
-%token <Data.tree> EXPR
 %token IMPL AND OR NOT
 %token OPEN CLOSE
-%token GENERAL COMMA
+%token DISP COMMA
 %token EOF
 %right IMPL
 %left OR
@@ -24,7 +23,6 @@ main:
   expr EOF           { $1 }
 expr:
   VAR                { Var ($1) }
-  | EXPR             { $1 }
   | OPEN expr CLOSE  { $2 }
   | NOT expr         { Neg ($2) }
   | expr IMPL expr   { Binop (Impl, $1, $3) }
@@ -33,8 +31,8 @@ expr:
 
 
 head:
-	exprs GENERAL expr EOF { ($1, $3) }
-	| GENERAL expr EOF { ([], $2) }
+	exprs DISP expr EOF { ($1, $3) }
+	| DISP expr EOF { ([], $2) }
 exprs:
 	expr { [ $1 ] }
 	| expr COMMA exprs { $1 :: $3 }

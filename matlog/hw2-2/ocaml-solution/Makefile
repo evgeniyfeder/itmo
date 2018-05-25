@@ -1,8 +1,8 @@
 .PHONY: pack all run clean src/parcer src/sources
 GENERATED=src/parser.mli src/parser.ml src/lexer.ml
-SOURCE=check.ml deduct.ml
+SOURCE=src/check.ml src/deduct.ml
 OCAMLC=ocamlc # ocamlopt for speed
-PACKAGE=hw3.zip
+PACKAGE=hw2.zip
 
 ifeq ($(OS),Windows_NT)
 	DEL=del /f
@@ -28,7 +28,7 @@ main.exe: $(GENERATED) src/data.cmi src/sources
 	cd src && $(OCAMLC) data.ml $(GENERATED:src/%=%) $(SOURCE:src/%=%) main.ml -o ../main.exe
 
 pack: $(GENERATED)
-	zip $(PACKAGE) -r Makefile src proofs
+	zip $(PACKAGE) -r Makefile src
 
 $(GENERATED): src/lexer.mll src/parser.mly
 	ocamllex src/lexer.mll 
