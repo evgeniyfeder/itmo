@@ -1,0 +1,2 @@
+javac ru/ifmo/rain/feder/concurrent/*.java
+java -cp ../artifacts/IterativeParallelismTest.jar;../lib/*; info.kgeorgiy.java.advanced.concurrent.Tester list ru.ifmo.rain.feder.concurrent.IterativeParallelism %*

@@ -1,0 +1,2 @@
+javac -cp .;../artifacts/HelloUDPTest.jar;../lib/* ru/ifmo/rain/feder/hello/HelloUDPClient.java
+java -cp .;../artifacts/HelloUDPTest.jar;../lib/* info.kgeorgiy.java.advanced.hello.Tester client-i18n ru.ifmo.rain.feder.hello.HelloUDPClient %*

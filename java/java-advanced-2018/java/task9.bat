@@ -1,0 +1,2 @@
+javac -cp ../artifacts/WebCrawlerTest.jar;../lib/* ru/ifmo/rain/feder/crawler/*.java
+java -cp ../artifacts/WebCrawlerTest.jar;../lib/* info.kgeorgiy.java.advanced.crawler.Tester hard ru.ifmo.rain.feder.crawler.WebCrawler %*

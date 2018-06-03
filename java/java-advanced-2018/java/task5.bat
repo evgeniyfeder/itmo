@@ -1,0 +1,2 @@
+javac -cp ../artifacts/JarImplementorTest.jar ru/ifmo/rain/feder/implementor/*.java
+java -cp ./;../artifacts/JarImplementorTest.jar;../lib/* info.kgeorgiy.java.advanced.implementor.Tester jar-class ru.ifmo.rain.feder.implementor.Implementor %*

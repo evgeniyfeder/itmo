@@ -1,0 +1,2 @@
+javac -cp ../artifacts/StudentTest.jar ru/ifmo/rain/feder/student/*.java
+java -cp ../artifacts/StudentTest.jar;../lib/*; info.kgeorgiy.java.advanced.student.Tester StudentQuery ru.ifmo.rain.feder.student.StudentDB %*
