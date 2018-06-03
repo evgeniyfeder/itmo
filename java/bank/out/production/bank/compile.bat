@@ -1,0 +1,1 @@
+javac ru/ifmo/feder/rmi/*.java
