@@ -7,7 +7,7 @@
 #include <vector>
 
 
-int main() {
+int main(int argc, char* argv[], char* envp[]) {
 	std::cout << "> ";                                  
 
 	std::string line;	
@@ -38,7 +38,7 @@ int main() {
 				char_args[i] = args[i].data();
 			char_args[args.size()] = nullptr;
 
-			if (execv(char_args[0], const_cast<char* const*>(char_args.data())) == -1) {
+			if (execve(char_args[0], const_cast<char* const*>(char_args.data()), envp) == -1) {
 				perror("execv");
 				exit(1);
 			}
