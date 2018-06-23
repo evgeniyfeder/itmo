@@ -1,3 +1,6 @@
 [submodule "matlog/hw0"]
 	path = matlog/hw0
 	url = https://github.com/itegulov/hw0-reference-solutions.git
+[submodule "matan/3_4_semester_conspect"]
+	path = matan/3_4_semester_conspect
+	url = https://github.com/Dogzik/matan-tex
