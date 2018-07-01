@@ -299,3 +299,4 @@ matan/
 *.cmo
 asm/hw/print/
 asm/*
+algo/dz/*

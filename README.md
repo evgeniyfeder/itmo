@@ -1,2 +1,9 @@
-# itmo
-Workspace ITMO subjects 
+# Материалы по курсам ИТМО(y2016-39 версия)
+## [Алгоритмы и структуры данных](https://github.com/evgeniyfeder/itmo/tree/master/algo/labs)
+## [Дискретная математика](https://github.com/evgeniyfeder/itmo/tree/master/da)
+## [Язык программирования С++](https://github.com/evgeniyfeder/itmo/tree/master/cpp)
+## [Язык программирования Java](https://github.com/evgeniyfeder/itmo/tree/master/java)
+## [Парадигмы программирования](https://github.com/evgeniyfeder/itmo/tree/master/paradigms)
+## [Операционные система](https://github.com/evgeniyfeder/itmo/tree/master/os)
+## [Математический анализ](https://github.com/evgeniyfeder/itmo/tree/master/matan)
+## [Математическая логика](https://github.com/evgeniyfeder/itmo/tree/master/matlog)
