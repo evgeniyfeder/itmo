@@ -1,5 +1,5 @@
 # Материалы по курсам ИТМО(y2016-39 версия)
-К сожалению 1 семестр у меня пропал из-за того, что компьютер неожиданно сломался. Поэтому все материалы начинаются со 2+ семестров(ну и иногда конца 1).
+К сожалению, 1 семестр у меня пропал из-за того, что компьютер неожиданно сломался. Поэтому все материалы начинаются со 2+ семестров(ну и иногда конца 1).
 ## [Алгоритмы и структуры данных](https://github.com/evgeniyfeder/itmo/tree/master/algo/labs)
   Здесь есть несколько лаборатнорных работ на тему АиСД:
   * [ДП](https://github.com/evgeniyfeder/itmo/tree/master/algo/labs/dp)
@@ -13,7 +13,7 @@
   * [Суффиксные структуры](https://github.com/evgeniyfeder/itmo/tree/master/algo/labs/suffix)
 
 ## [Дискретная математика](https://github.com/evgeniyfeder/itmo/tree/master/da)
-  Как и в АиСД тут есть только лабораторные работы:
+  Как и в АиСД, тут есть только лабораторные работы:
   * [Комбинаторика](https://github.com/evgeniyfeder/itmo/tree/master/da/comb)
   * [Теория вероятности](https://github.com/evgeniyfeder/itmo/tree/master/da/teor_ver)
   * [Конечные автоматы](https://github.com/evgeniyfeder/itmo/tree/master/da/avtomats)
@@ -44,10 +44,11 @@
   * ["JIT compiler"](https://github.com/evgeniyfeder/itmo/tree/master/os/hws/hw3)
   * [Работа с библиотеками](https://github.com/evgeniyfeder/itmo/tree/master/os/hws/hw4)
   * [Простенький echo-server](https://github.com/evgeniyfeder/itmo/tree/master/os/hws/hw5)
+
 ## [Математический анализ](https://github.com/evgeniyfeder/itmo/tree/master/matan)
 Есть законспектированные нами [лекции Кохася](https://github.com/Dogzik/matan-tex/tree/9171485fe449b5e6705d3b12ec726177bab59b00) в техе.
 ## [Математическая логика](https://github.com/evgeniyfeder/itmo/tree/master/matlog)
-Условия домашек, а также много полезной информации есть на [гитхабе ДГ нашего года](https://github.com/shd/logic2018). Здесь есть несколько реализаций дз на OCamle
+Условия домашек, а также много полезной информации, есть на [гитхабе ДГ нашего года](https://github.com/shd/logic2018). Здесь есть несколько реализаций дз на OCamle
   0. [Разбор выражения](https://github.com/itegulov/hw0-reference-solutions/tree/c18ed95148fe4462ebb61f0b71088b53b810d1a6)
   1. [Проверка вывода в ИВ](https://github.com/evgeniyfeder/itmo/tree/master/matlog/hw1)
   2. [Теорема о дедукции в ИВ](https://github.com/evgeniyfeder/itmo/tree/master/matlog/hw2)
