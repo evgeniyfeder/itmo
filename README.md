@@ -37,7 +37,19 @@
 Билеты [к 2 экзамену](https://github.com/sorokin/cpp11-course/blob/gh-pages/index.md).
 
 ## [Язык программирования Java](https://github.com/evgeniyfeder/itmo/tree/master/java)
-  TODO
+Домашки:
+1. [Обход файлов](https://github.com/evgeniyfeder/itmo/tree/master/java/java-advanced-2018/java/ru/ifmo/rain/feder/walk)
+2. [Множество на массиве](https://github.com/evgeniyfeder/itmo/tree/master/java/java-advanced-2018/java/ru/ifmo/rain/feder/arrayset)
+3. [Студенты](https://github.com/evgeniyfeder/itmo/tree/master/java/java-advanced-2018/java/ru/ifmo/rain/feder/student)
+4. [Implementor, Jar Implementor и Javadoc](https://github.com/evgeniyfeder/itmo/tree/master/java/java-advanced-2018/java/ru/ifmo/rain/feder/implementor)
+5. [Итеративный параллелизм](https://github.com/evgeniyfeder/itmo/tree/master/java/java-advanced-2018/java/ru/ifmo/rain/feder/concurrent)
+6. [Параллельный запуск](https://github.com/evgeniyfeder/itmo/tree/master/java/java-advanced-2018/java/ru/ifmo/rain/feder/mapper)
+7. [Web Crawler(без харда)](https://github.com/evgeniyfeder/itmo/tree/master/java/java-advanced-2018/java/ru/ifmo/rain/feder/crawler)
+8. [HelloUDP](https://github.com/evgeniyfeder/itmo/tree/master/java/java-advanced-2018/java/ru/ifmo/rain/feder/hello)
+9. [Физические лица](https://github.com/evgeniyfeder/itmo/tree/master/java/bank/src/ru/ifmo/feder/rmi)
+10. Cтатистика текста(не сделано)
+
+Описания к условиям и тестам можно найти в корне курса. 
 ## [Парадигмы программирования](https://github.com/evgeniyfeder/itmo/tree/master/paradigms)
 Домашки:
 1. [Сложение чисел](https://github.com/evgeniyfeder/itmo/tree/master/paradigms/java/hw-1)
@@ -53,7 +65,7 @@
 11. [Обработка ошибок на JavaScript](https://github.com/evgeniyfeder/itmo/tree/master/paradigms/js/js-3)
 12. [Функциональные выражения на Clojure](https://github.com/evgeniyfeder/itmo/tree/master/paradigms/clojure/cl-1)
 
-Описания к условиям и тестам можно найти в корне курса. Правда они взяты с y2017, но я думаю несовпадений должно быть не очень много. 
+Описания к условиям и тестам можно найти в корне курса. Правда они взяты с y2017, но я думаю несовпадений должно быть не очень много.
 ## [Операционные система](https://github.com/evgeniyfeder/itmo/tree/master/os)
 Есть записи лекций и практик. Но их не очень много. Также есть несколько домашек.
   * [Shell](https://github.com/evgeniyfeder/itmo/tree/master/os/hws/hw1)
