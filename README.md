@@ -36,8 +36,24 @@
 Билеты [к 1 экзамену](http://sorokin.github.io/cpp-course/).
 Билеты [к 2 экзамену](https://github.com/sorokin/cpp11-course/blob/gh-pages/index.md).
 
-## [Язык программирования Java](https://github.com/evgeniyfeder/itmo/tree/master/java) и [Парадигмы программирования](https://github.com/evgeniyfeder/itmo/tree/master/paradigms)
+## [Язык программирования Java](https://github.com/evgeniyfeder/itmo/tree/master/java)
   TODO
+## [Парадигмы программирования](https://github.com/evgeniyfeder/itmo/tree/master/paradigms)
+Домашки:
+1. [Сложение чисел](https://github.com/evgeniyfeder/itmo/tree/master/paradigms/java/hw-1)
+2. [Бинарный поиск](https://github.com/evgeniyfeder/itmo/tree/master/paradigms/java/hw-2)
+3. [Очередь на массиве](https://github.com/evgeniyfeder/itmo/tree/master/paradigms/java/hw-3)
+4. [Очередь на связном списке](https://github.com/evgeniyfeder/itmo/tree/master/paradigms/java/hw-4)
+5. [Вычисление выражений](https://github.com/evgeniyfeder/itmo/tree/master/paradigms/java/hw-5)
+6. [Разбор выражений](https://github.com/evgeniyfeder/itmo/tree/master/paradigms/java/hw-6)
+7. [Обработка ошибок](https://github.com/evgeniyfeder/itmo/tree/master/paradigms/java/hw-7/)
+8. Вычисление в различных типах(не делал)
+9. [Функциональные выражения на JavaScript](https://github.com/evgeniyfeder/itmo/tree/master/paradigms/js/js-1)
+10. [Объектные выражения на JavaScript](https://github.com/evgeniyfeder/itmo/tree/master/paradigms/js/js2-2)
+11. [Обработка ошибок на JavaScript](https://github.com/evgeniyfeder/itmo/tree/master/paradigms/js/js-3)
+12. [Функциональные выражения на Clojure](https://github.com/evgeniyfeder/itmo/tree/master/paradigms/clojure/cl-1)
+
+Описания к условиям и тестам можно найти в корне курса. Правда они взяты с y2017, но я думаю несовпадений должно быть не очень много. 
 ## [Операционные система](https://github.com/evgeniyfeder/itmo/tree/master/os)
 Есть записи лекций и практик. Но их не очень много. Также есть несколько домашек.
   * [Shell](https://github.com/evgeniyfeder/itmo/tree/master/os/hws/hw1)
