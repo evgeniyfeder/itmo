@@ -3,7 +3,7 @@
 
 _arctan_simd:
 	movss xmm0, [esp + 4]
-	
+	int3
 	movss xmm1, xmm0
 	
 	movss xmm2, [MINUS_ONE]

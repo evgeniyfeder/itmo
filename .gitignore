@@ -292,11 +292,7 @@ __pycache__/
 *.aux
 *.in
 *.out
-matan/
 *.class
 
 *.cmi
 *.cmo
-asm/hw/print/
-asm/*
-algo/dz/*

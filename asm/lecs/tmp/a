@@ -1,0 +1,9 @@
+pmovps xmm0, [pointer + x]
+pxor xmm1, xmm1
+pcmpeqb xmm0, xmm1
+
+pmovmskb eax, xmm0
+test eax, eax
+jnz exit 
+
+exit:

@@ -7,7 +7,7 @@
     </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
@@ -15,18 +15,36 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <YASM Include="a.asm">
+    <ClInclude Include="diy_fp.h">
       <Filter>Source Files</Filter>
-    </YASM>
-    <YASM Include="print.asm">
+    </ClInclude>
+    <ClInclude Include="double.h">
       <Filter>Source Files</Filter>
-    </YASM>
+    </ClInclude>
+    <ClInclude Include="fast_exponent.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="grisu2.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="k_comp.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="powers.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="powers_ten_round64.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prettify.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test.cpp">
+    <ClCompile Include="grisu2b_59_56.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.c">
+    <ClCompile Include="tests.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

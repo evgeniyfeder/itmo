@@ -4,3 +4,6 @@
 [submodule "matan/3_4_semester_conspect"]
 	path = matan/3_4_semester_conspect
 	url = https://github.com/Dogzik/matan-tex
+[submodule "comp_geom/geom_hw"]
+	path = comp_geom/geom_hw
+	url = https://github.com/GoPavel/geometry2018.git

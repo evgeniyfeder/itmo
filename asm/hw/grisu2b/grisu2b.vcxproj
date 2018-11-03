@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{FB6E7110-63B1-471A-B2D2-C02168ECBA64}</ProjectGuid>
+    <ProjectGuid>{D7EC420E-D822-48C0-BDF8-55BA837A2631}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>hw1</RootNamespace>
+    <RootNamespace>grisu2b</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -54,7 +54,6 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
-    <Import Project="$(VCTargetsPath)\BuildCustomizations\vsyasm.props" />
   </ImportGroup>
   <ImportGroup Label="Shared">
   </ImportGroup>
@@ -94,9 +93,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
     </Link>
-    <YASM>
-      <ObjectFile>$(IntDir)%(Filename).obj</ObjectFile>
-    </YASM>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -143,17 +139,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <YASM Include="a.asm">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </YASM>
-    <YASM Include="print.asm" />
+    <ClInclude Include="diy_fp.h" />
+    <ClInclude Include="double.h" />
+    <ClInclude Include="fast_exponent.h" />
+    <ClInclude Include="grisu2.h" />
+    <ClInclude Include="k_comp.h" />
+    <ClInclude Include="powers.h" />
+    <ClInclude Include="powers_ten_round64.h" />
+    <ClInclude Include="prettify.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.c" />
-    <ClCompile Include="test.cpp" />
+    <ClCompile Include="grisu2b_59_56.c" />
+    <ClCompile Include="tests.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
-    <Import Project="$(VCTargetsPath)\BuildCustomizations\vsyasm.targets" />
   </ImportGroup>
 </Project>

@@ -1,0 +1,47 @@
+#include <cstdio>
+#include <cstdlib>
+
+extern "C" {
+	void _cdecl print(char *out_buf, const char *format, const char *hex_number);
+}
+
+int main() {
+	printf("%5d 5d\n", 12345);
+	printf("% 5d _5d\n", -12345);
+	printf("% 5d _5d\n", 12345);
+	printf("%6d 6d\n", -12345);
+	printf("%6d 6d\n", 12345);
+	printf("%06d 06d\n", 12345);
+	printf("% 6d _6d\n", -12345);
+	printf("% 6d _6d\n", 12345);
+	printf("% 06d _06d\n", 1234);
+	printf("% 06d _06d\n", 1234);
+	printf("% 06d _06d\n", -1234);
+	printf("% 06d _06d\n", -1234);
+	printf("% 0+6d _+06d\n", 1234);
+	printf("% 0+6d _+06d\n", -1234);
+	printf("% +6d _+6d\n", 1234);
+	printf("%-07dend\n\n\n", 12345);
+	/*
+	 * 12345 5d
+-12345 _5d
+ 12345 _5d
+-12345 6d
+ 12345 6d
+012345 06d
+-12345 _6d
+ 12345 _6d
+ 01234 _06d
+ 01234 _06d
+-01234 _06d
+-01234 _06d
++01234 _+06d
+-01234 _+06d
+ +1234 _+6d
+12345  end
+	 */
+	char *ptr = (char *)malloc(100);
+	ptr[0] = 1;
+	print(ptr, "+ 06", "1A");
+	return 0;
+}

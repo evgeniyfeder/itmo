@@ -15,19 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <YASM Include="a.asm">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
-    </YASM>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
     <YASM Include="print.asm">
       <Filter>Source Files</Filter>
     </YASM>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="test.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="main.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>
