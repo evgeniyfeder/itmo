@@ -1,0 +1,15 @@
+project(comp_geom_lab)
+
+set (CMAKE_CXX_STANDARD 17)
+
+add_executable(watchtowers watchtowers.cpp)
+add_executable(quickhull quickhull.cpp)
+add_executable(inside inside.cpp)
+add_executable(inside2 inside_non_convex.cpp)
+add_executable(diameter diameter.cpp)
+add_executable(min_dist min_dist.cpp)
+add_executable(nearest_point nearest_point.cpp)
+add_executable(distance distance.cpp)
+add_executable(triangulation triangulation.cpp)
+add_executable(plane_inter plane_inter.cpp)
+add_executable(area area.cpp)
