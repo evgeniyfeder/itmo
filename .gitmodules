@@ -6,4 +6,7 @@
 	url = https://github.com/Dogzik/matan-tex
 [submodule "comp_geom/geom_hw"]
 	path = comp_geom/geom_hw
-	url = https://github.com/GoPavel/geometry2018.git
+   url = https://github.com/GoPavel/geometry2018.git
+[submodule "mt/lab4"]
+   path = mt/lab4
+   url = https://github.com/evgeniyfeder/parser_generator
