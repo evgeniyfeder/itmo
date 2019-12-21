@@ -99,8 +99,8 @@ async def test_client_response(client):
 @pytest.mark.asyncio
 async def test_search_posts(client):
     res = await search_posts(vk_client=client,
-                             pattern="Из Китая",
-                             count=1)
+                                        pattern="Из Китая",
+                                        count=1)
     assert len(res) == 1
     assert res[0].id == 1434
     assert res[0].likes_count == 0

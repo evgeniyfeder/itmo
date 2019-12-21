@@ -4,6 +4,7 @@ import logging
 import attr
 from datetime import datetime
 import typing
+import time
 
 from vk_client.abstractclient import AbstractVkClient, VkApiError
 
@@ -43,8 +44,8 @@ class HttpxVkClient(AbstractVkClient):
         if "response" in j:
             return j["response"]
 
-    def close(self):
-        self.client.close()
+    async def close(self):
+        await self.client.close()
 
 
 @attr.s(auto_attribs=True)
@@ -66,12 +67,13 @@ class NewsfeedSearchResponse:
             date=datetime.fromtimestamp(json['date']), text=json['text'],
             comments_count=json['comments']['count'],
             likes_count=json['likes']['count'],
-            reposts_count=json['reposts']['count']
+            reposts_count=json['reposts']['count'],
         )
 
 
 async def search_posts(vk_client: HttpxVkClient,
                        pattern: str,
-                       count: int) -> typing.List[NewsfeedSearchResponse]:
+                       count: int) \
+        -> typing.List[NewsfeedSearchResponse]:
     response = await vk_client.execute_method(method_name="newsfeed.search", params={"q": pattern, "count": count})
     return [NewsfeedSearchResponse.from_json(j) for j in response["items"]]
