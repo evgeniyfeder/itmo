@@ -61,7 +61,6 @@ public class ProductServerUnitTest {
         when(rs.getInt(1)).thenReturn(3);
         when(productDB.getCountProduct()).thenReturn(new ProductDBStatement(c, s, rs));
 
-        GetProductsServlet x = new GetProductsServlet(productDB);
         request = mock(HttpServletRequest.class);
         response = mock(HttpServletResponse.class);
 
