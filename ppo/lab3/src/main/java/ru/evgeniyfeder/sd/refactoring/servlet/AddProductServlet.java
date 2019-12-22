@@ -1,4 +1,6 @@
-package ru.akirakozov.sd.refactoring.servlet;
+package ru.evgeniyfeder.sd.refactoring.servlet;
+
+import ru.evgeniyfeder.sd.refactoring.db.ProductDB;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -8,10 +10,13 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 
-/**
- * @author akirakozov
- */
+
 public class AddProductServlet extends HttpServlet {
+    ProductDB db;
+
+    public AddProductServlet(ProductDB db) {
+        this.db = db;
+    }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -19,13 +24,7 @@ public class AddProductServlet extends HttpServlet {
         long price = Long.parseLong(request.getParameter("price"));
 
         try {
-            try (Connection c = DriverManager.getConnection("jdbc:sqlite:test.db")) {
-                String sql = "INSERT INTO PRODUCT " +
-                        "(NAME, PRICE) VALUES (\"" + name + "\"," + price + ")";
-                Statement stmt = c.createStatement();
-                stmt.executeUpdate(sql);
-                stmt.close();
-            }
+            db.insertOneProduct(name, price);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
