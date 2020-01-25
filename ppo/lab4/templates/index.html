@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>TodoList</title>
+  </head>
+
+  <body>
+    <main role="main">
+      <div>
+        <h1> Lists: </h1>
+        {% if todolist %}
+          {% for list in todolist %}
+            <div>
+              <h2> {{ list[0].name }}: {{ list[0].desc }} </h2>
+
+              <ul>
+                {% for task in list[1] %}
+                  <li>
+                    {{ task.name }}: {{ task.desc }}
+                  </li>
+                {% endfor %}
+              </ul>
+
+              <form action="/remove_list", method="post">
+                <input type="hidden" name="list_id" value= {{ list[0].id }}>
+                <button type="submit">Remove list</button>
+              </form>
+              <br>
+              <form action="/add_task", method="post">
+                <input type="hidden" name="list_id" value= {{ list[0].id }}>
+                Name: <input type="text" name="name"><br>
+                Description: <input type="text" name="desc"><br>
+                <button type="submit">Add task</button>
+              </form>
+
+            </div>
+            <hr/>
+          {% endfor %}
+        {% endif %}
+      </div>
+      <hr/>
+      <div>
+        <h4> New list: </h4>
+        <form action="/add_list", method="post">
+          Name: <input type="text" name="name"><br>
+          Description: <input type="text" name="desc"><br>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
