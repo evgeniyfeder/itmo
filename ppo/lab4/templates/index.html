@@ -20,7 +20,16 @@
               <ul>
                 {% for task in list[1] %}
                   <li>
-                    {{ task.name }}: {{ task.desc }}
+                    {% if task.status.value|int != 2 %}
+                      {{ task.name }}: {{ task.desc }}
+                      <form action="/do_task", method="post">
+                        <input type="hidden" name="task_id" value= {{ task.id }}>
+                        <input type="submit" value="Done">
+                      </form>
+                    {% else %}
+                      <strike> {{ task.name }}: {{ task.desc }} </strike>
+                    {% endif %}
+
                   </li>
                 {% endfor %}
               </ul>

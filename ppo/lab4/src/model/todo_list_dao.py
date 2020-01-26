@@ -1,5 +1,5 @@
 from typing import List, Tuple
-from model.ModelObjects import TodoTask, TodoList
+from model.model_objects import TodoTask, TodoList, TaskStatus
 from abc import ABCMeta, abstractmethod
 
 
@@ -21,5 +21,5 @@ class TodoListDao(metaclass=ABCMeta):
         raise NotImplementedError
 
     @abstractmethod
-    def mark_task_as_done(self, task_id: int):
+    def change_task_status(self, task_id: int, status: TaskStatus):
         raise NotImplementedError

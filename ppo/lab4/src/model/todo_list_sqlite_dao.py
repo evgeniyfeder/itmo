@@ -1,8 +1,8 @@
 import sqlite3
 from typing import List, Tuple
-from model.ModelObjects import TodoTask, TodoList, TaskStatus
+from model.model_objects import TodoTask, TodoList, TaskStatus
 from contextlib import closing
-from model.TodoListDao import TodoListDao
+from model.todo_list_dao import TodoListDao
 
 
 class TodoListSqliteDao(TodoListDao):
@@ -60,7 +60,5 @@ class TodoListSqliteDao(TodoListDao):
     def remove_todolist(self, list_id: int):
         self._execute_query(f"DELETE FROM TodoList WHERE id = {list_id}")
 
-    def mark_task_as_done(self, task_id: int):
-        self._execute_query("UPDATE TodoTask"
-                            f"SET status = {TaskStatus.CLOSED}"
-                            f"WHERE id = {task_id}")
+    def change_task_status(self, task_id: int, status: TaskStatus):
+        self._execute_query(f"UPDATE TodoTask SET status = {status.value} WHERE id = {task_id}")
