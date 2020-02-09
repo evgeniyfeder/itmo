@@ -37,13 +37,18 @@ int main()
       std::cin >> clazz >> num_words;
       clazz--;
 
+      std::unordered_set<std::string> words {};
       for (std::size_t j = 0; j < num_words; ++j)
       {
          std::string word;
          std::cin >> word;
 
-         word_freq[clazz][word]++;
+         words.insert(word);
       }
+
+      for (auto && w : words)
+         word_freq[clazz][w]++;
+
       class_count[clazz]++;
    }
 
@@ -82,29 +87,42 @@ int main()
       }
 
       std::vector<double> scores(num_classes);
+
+      std::size_t cnt = 0;
       double sum_scores = 0;
       for (std::size_t c = 0; c < num_classes; ++c)
       {
-         double score = log(class_errors[c] * P_C[c]);
-
-         for (auto && w : words)
+         if (class_count[c] != 0)
          {
-            if (P_O_C[c].find(w) != P_O_C[c].end())
-               score += log(P_O_C[c][w]);
-            else
-               score += log(alpha / (double)(class_count[c] + alpha * word_freq[c].size()));
+            double score = log(class_errors[c] * P_C[c]);
+
+            for (auto && w : words)
+            {
+               if (P_O_C[c].find(w) != P_O_C[c].end())
+                  score += log(P_O_C[c][w]);
+               else
+                  score += log(alpha / (double) (class_count[c] + alpha * word_freq[c].size()));
+            }
+            scores[c] = score;
+            cnt++;
+            sum_scores += score;
          }
-         score = exp(score);
-         scores[c] = score;
-         sum_scores += score;
+      }
+
+      double avg = -sum_scores / cnt;
+      sum_scores = 0;
+      for (std::size_t c = 0; c < num_classes; ++c)
+      {
+         if (class_count[c] != 0)
+         {
+            scores[c] = exp(avg + scores[c]);
+            sum_scores += scores[c];
+         }
       }
 
       for (auto && s : scores)
          std::cout << s / sum_scores << ' ';
       std::cout << std::endl;
-
-
-
    }
 
 }
