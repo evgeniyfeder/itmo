@@ -1,9 +1,13 @@
 cmake_minimum_required(VERSION 3.15)
 project(ml_cf)
 
+set(CMAKE_CXX_STANDARD 17)
 
 add_definitions(-DLOCAL)
-add_executable(bayes bayes.cpp) # E
+
+add_executable(liner linear.cpp) # D
+add_executable(svm svm.cpp) # E
+add_executable(bayes bayes.cpp) # F
 
 add_executable(correlation correlation.cpp) # M N
 add_executable(distance distance.cpp) # O
