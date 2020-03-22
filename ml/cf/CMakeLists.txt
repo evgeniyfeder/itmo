@@ -8,6 +8,7 @@ add_definitions(-DLOCAL)
 add_executable(liner linear.cpp) # D
 add_executable(svm svm.cpp) # E
 add_executable(bayes bayes.cpp) # F
+add_executable(logic_expr logic_expr.cpp) # I
 
 add_executable(correlation correlation.cpp) # M N
 add_executable(distance distance.cpp) # O
