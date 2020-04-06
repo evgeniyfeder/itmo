@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "fitness_center"
+version = "0.1.0"
+description = ""
+authors = ["Evgeniy Feder <dzaba67@yandex.ru>"]
+packages = [
+    { include = "turnstile", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+attrs = "^19.3.0"
+wheel = "^0.34.2"
+psycopg2-binary = "^2.8.4"
+fastapi = "^0.53.2"
+uvicorn = "^0.11.3"
+pytest = "^5.4.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
