@@ -10,3 +10,6 @@
 [submodule "mt/lab4"]
    path = mt/lab4
    url = https://github.com/evgeniyfeder/parser_generator
+[submodule "opt_met"]
+	path = opt_met
+	url = https://github.com/GoPavel/optimization-methods.git
