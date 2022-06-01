@@ -6,7 +6,7 @@ authors = ["Evgeniy Feder <dzaba67@yandex.ru>"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
-httpx = "^0.9.5"
+httpx = "^0.23.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.3.2"
